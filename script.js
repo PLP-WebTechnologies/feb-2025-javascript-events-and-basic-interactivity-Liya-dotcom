@@ -84,11 +84,16 @@ function showSecret() {
 
 // Button that changes text and color
 const colorChanger = document.getElementById('colorChanger');
+const colors = ['#3f72af', '#ff6b6b', '#6bff6b', '#ffa36b', '#a36bff'];
+let colorIndex = 0;
 
 colorChanger.addEventListener('click', function () {
-    this.textContent = "Color Changed!";
-    this.style.backgroundColor = "#ffa36b";
-    this.style.color = "#ffffff";
+    // Increment the color index and reset if it exceeds the array length
+    colorIndex = (colorIndex + 1) % colors.length;
+
+    // Change the button's background color and update its text
+    this.style.backgroundColor = colors[colorIndex];
+    this.textContent = `Color Changed! (${colorIndex + 1}/${colors.length})`;
 });
 
 // Image gallery
