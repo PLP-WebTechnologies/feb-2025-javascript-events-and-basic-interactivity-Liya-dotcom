@@ -1,0 +1,191 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f7f7;
+    color: #3f72af;
+}
+
+h1 {
+    color: #112d4e;
+    text-align: center;
+}
+
+.section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Button styles */
+.fun-button {
+    background-color: #3f72af;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.fun-button:hover {
+    background-color: #112d4e;
+    transform: scale(1.05);
+}
+
+.fun-button:active {
+    transform: scale(0.95);
+}
+
+/* Image gallery */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.image-viewer {
+    text-align: center;
+}
+
+#mainImage {
+    max-width: 100%;
+    display: none;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-bottom: -1px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #dbe2ef;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+}
+
+.tab.active {
+    background-color: white;
+    border-bottom: 1px solid white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 5px;
+    background-color: white;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Form validation */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}
+
+.valid {
+    border-color: green;
+}
+
+.invalid {
+    border-color: red;
+}
+
+#passwordStrength {
+    height: 5px;
+    width: 0%;
+    background-color: #3f72af;
+    margin-top: 5px;
+    transition: width 0.3s ease;
+}
+
+/* Hover area */
+#hoverArea {
+    padding: 20px;
+    background-color: #dbe2ef;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+}
+
+/* Key display */
+#keyDisplay {
+    height: 30px;
+    margin: 10px 0;
+}
+
+/* Secret area */
+#secretArea {
+    padding: 20px;
+    background-color: #f9f7f7;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.secret-message {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.secret-message.show {
+    opacity: 1;
+    height: auto;
+    padding: 20px;
+}
+
+/* Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}

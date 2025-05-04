@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Playground</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>🎉 Interactive Playground 🎉</h1>
+    
+    <!-- Event Handling Section -->
+    <div class="section">
+        <h2>1. Event Handling 🎈</h2>
+        
+        <button id="clickButton" class="fun-button">Click Me!</button>
+        <p id="clickMessage">Try clicking the button above</p>
+        
+        <div id="hoverArea">Hover over me to see magic!</div>
+        
+        <p>Press any key on your keyboard:</p>
+        <div id="keyDisplay"></div>
+        
+        <div id="secretArea">
+            <p>Double click or long press here for a secret!</p>
+            <div class="secret-message" id="secretMessage">
+                🎊 You found the secret! You're amazing! 🎊
+            </div>
+        </div>
+    </div>
+    
+    <!-- Interactive Elements Section -->
+    <div class="section">
+        <h2>2. Interactive Elements 🎮</h2>
+        
+        <button id="colorChanger" class="fun-button">Change My Color!</button>
+        
+        <h3>Image Gallery</h3>
+        <div class="gallery">
+            <img src="https://picsum.photos/id/237/400/300" alt="Happy dog" id="galleryImage1">
+            <img src="https://picsum.photos/id/1003/400/300" alt="Beautiful landscape" id="galleryImage2">
+            <img src="https://picsum.photos/id/1025/400/300" alt="Cute animal" id="galleryImage3">
+        </div>
+        <div class="image-viewer">
+            <p id="imageCaption">Click on an image to see it larger</p>
+            <img id="mainImage" src="" alt="Enlarged view">
+        </div>
+        
+        <h3>Tab System</h3>
+        <div class="tabs">
+            <div class="tab active" data-tab="tab1">Tab 1</div>
+            <div class="tab" data-tab="tab2">Tab 2</div>
+            <div class="tab" data-tab="tab3">Tab 3</div>
+        </div>
+        <div class="tab-content active" id="tab1">
+            <p>Welcome to the first tab! Here's some content for you.</p>
+            <button id="bounceButton" class="fun-button">Make me bounce!</button>
+        </div>
+        <div class="tab-content" id="tab2">
+            <p>This is the second tab with different content.</p>
+            <p>Did you know tabs help organize information?</p>
+        </div>
+        <div class="tab-content" id="tab3">
+            <p>Final tab! You've explored them all.</p>
+            <p>Great job navigating!</p>
+        </div>
+    </div>
+    
+    <!-- Form Validation Section -->
+    <div class="section">
+        <h2>3. Form Validation 📋✅</h2>
+        
+        <form id="userForm">
+            <div class="form-group">
+                <label for="username">Username (required):</label>
+                <input type="text" id="username" placeholder="Enter your username">
+                <div class="error" id="usernameError">Username is required</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div class="error" id="emailError">Please enter a valid email</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password (min 8 characters):</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div class="error" id="passwordError">Password must be at least 8 characters</div>
+                <div id="passwordStrength"></div>
+            </div>
+            
+            <button type="submit" class="fun-button">Submit</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
